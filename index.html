@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidscodingteacher.com | Result-Oriented Coding for Kids</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .hero-gradient { background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.05) 0%, rgba(255, 255, 255, 1) 90%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-blue-600 p-2 rounded-lg shadow-lg shadow-blue-200">
+                    <i data-lucide="code-2" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-extrabold text-blue-900 tracking-tight">
+                    KidsCoding<span class="text-blue-500">Teacher</span>
+                </span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-slate-600">
+                <a href="#approach" class="hover:text-blue-600 transition">Approach</a>
+                <a href="#curriculum" class="hover:text-blue-600 transition">Curriculum</a>
+                <a href="#portal" class="hover:text-blue-600 transition text-blue-600">Portal Login</a>
+                <a href="https://wa.me/yournumber" class="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                    Book Trial
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-slate-900" onclick="toggleMenu()">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-slate-100 p-6 flex flex-col space-y-4 shadow-xl">
+            <a href="#approach" class="font-bold text-slate-700">Approach</a>
+            <a href="#curriculum" class="font-bold text-slate-700">Curriculum</a>
+            <a href="#portal" class="font-bold text-blue-600">Portal Login</a>
+            <button class="bg-blue-600 text-white py-3 rounded-xl font-bold">Book Trial</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-40 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center space-x-2 bg-blue-100/50 border border-blue-200 px-4 py-1 rounded-full text-blue-700 text-sm font-bold">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>Practical Skills, Immediate Results</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[1.1]">
+                    Stop "Learning" to Code. Start <span class="text-blue-600">Building</span> Apps.
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-lg">
+                    We bridge the gap between boring theory and exciting creation. Through our <span class="font-bold text-slate-900">Quick-Win Portal</span>, parents track every single achievement in real-time.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#curriculum" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-200 text-center">
+                        Explore Courses
+                    </a>
+                    <button class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center">
+                        <i data-lucide="play-circle" class="mr-2 text-blue-600"></i> How it works
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="bg-slate-900 rounded-[2rem] p-4 shadow-2xl border-8 border-white/50 relative z-10">
+                    <div class="rounded-xl overflow-hidden bg-slate-800 p-6 font-mono text-sm text-blue-300">
+                        <div class="flex space-x-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <p class="text-slate-500 italic">// Building a "Quick-Win" project</p>
+                        <p><span class="text-pink-400">function</span> <span class="text-blue-400">createImpact</span>() {</p>
+                        <p class="ml-4"><span class="text-pink-400">const</span> skills = <span class="text-yellow-200">['HTML', 'Python', 'AI']</span>;</p>
+                        <p class="ml-4">results.show(<span class="text-green-400">"Immediately"</span>);</p>
+                        <p>}</p>
+                        <div class="mt-6 bg-white/10 p-4 rounded-lg border border-white/5">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i data-lucide="check" class="text-white"></i>
+                                </div>
+                                <span class="text-white text-xs font-bold uppercase tracking-wider">Project Verified by Portal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decorative Circles -->
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-400/20 blur-3xl rounded-full"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-indigo-400/20 blur-3xl rounded-full"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Strategy Section -->
+    <section id="approach" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Our "Result-First" Strategy</h2>
+                <p class="text-slate-500">Traditional teaching is too deep and too slow. We focus on what keeps students excited and parents informed.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-100">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Immediate MVP</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">We build a functional project in day one. Understanding follows creation, ensuring the "Quick Win" is achieved.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-100">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Live Dashboard</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Parents get a unique code to see their child's quiz scores, project screenshots, and live website links 24/7.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-sky-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-sky-100">
+                        <i data-lucide="video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Flipped Learning</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Class time is for building. Theory is moved to short, fun videos and simple PDF guides for revision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section id="curriculum" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-black text-slate-900 mb-4">Choose Your Path</h2>
+                    <p class="text-slate-500">Curated tracks for different age groups and goals.</p>
+                </div>
+                <div class="flex bg-white p-1 rounded-xl border border-slate-200 mt-6 md:mt-0">
+                    <button class="px-6 py-2 bg-blue-600 text-white rounded-lg font-bold text-sm">6-12 Years</button>
+                    <button class="px-6 py-2 text-slate-500 font-bold text-sm">13-17 Years</button>
+                    <button class="px-6 py-2 text-slate-500 font-bold text-sm">Adults 18+</button>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 card-hover">
+                    <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900">Scratch Game Logic</h4>
+                    <p class="text-xs text-slate-400 mb-4 uppercase font-bold tracking-widest">Ages 6 - 9</p>
+                    <p class="text-slate-500 text-sm mb-6">Learn algorithmic thinking by creating 2D arcade games.</p>
+                    <button class="text-blue-600 font-bold text-sm flex items-center">View Roadmap <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 card-hover">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900">Web Development</h4>
+                    <p class="text-xs text-slate-400 mb-4 uppercase font-bold tracking-widest">Ages 10 - 15</p>
+                    <p class="text-slate-500 text-sm mb-6">Build personal portfolios using HTML, CSS, and Bootstrap.</p>
+                    <button class="text-blue-600 font-bold text-sm flex items-center">View Roadmap <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 card-hover">
+                    <div class="w-10 h-10 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900">App Development</h4>
+                    <p class="text-xs text-slate-400 mb-4 uppercase font-bold tracking-widest">Ages 12 - 17</p>
+                    <p class="text-slate-500 text-sm mb-6">Make things interactive with JavaScript and modern APIs.</p>
+                    <button class="text-blue-600 font-bold text-sm flex items-center">View Roadmap <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 card-hover">
+                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="terminal"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900">Python & AI</h4>
+                    <p class="text-xs text-slate-400 mb-4 uppercase font-bold tracking-widest">Ages 18+</p>
+                    <p class="text-slate-500 text-sm mb-6">Data analysis, machine learning, and software automation.</p>
+                    <button class="text-blue-600 font-bold text-sm flex items-center">View Roadmap <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portal Preview Section (Improved Auth UI) -->
+    <section id="portal" class="py-24 px-6 bg-blue-900 text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-0 left-0 w-full h-full"
+                style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="space-y-8">
+                <div>
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-blue-500/20 text-blue-300 font-bold text-xs uppercase tracking-widest mb-4 border border-blue-400/30">Parent
+                        & Student Access</span>
+                    <h2 class="text-4xl lg:text-5xl font-black mb-6 leading-tight">Total Transparency for Parents.</h2>
+                    <p class="text-blue-100 text-lg opacity-80">Stop guessing if they are learning. Log in to see their
+                        real-time growth, quiz scores, and live code.</p>
+                </div>
+    
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-white/10 p-3 rounded-xl"><i data-lucide="camera" class="w-5 h-5 text-blue-300"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-xl">Visual Proof</h5>
+                            <p class="text-blue-200 text-sm">Screenshots of code and UI built today.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-white/10 p-3 rounded-xl"><i data-lucide="bar-chart"
+                                class="w-5 h-5 text-blue-300"></i></div>
+                        <div>
+                            <h5 class="font-bold text-xl">Recall Tracking</h5>
+                            <p class="text-blue-200 text-sm">Post-class quiz results to verify knowledge retention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Unified Auth Component -->
+            <div class="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-2xl text-slate-900">
+                <div class="mb-8 text-center">
+                    <h3 class="text-2xl font-extrabold text-slate-900">Welcome Back</h3>
+                    <p class="text-slate-500 text-sm">Choose your preferred login method</p>
+                </div>
+    
+                <!-- Social Buttons -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <button
+                        class="btn-press flex items-center justify-center space-x-2 border-2 border-slate-100 py-3 rounded-2xl hover:bg-slate-50 transition font-bold text-slate-700">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24">
+                            <path fill="#EA4335"
+                                d="M12.48 10.92v3.28h7.84c-.24 1.84-.9 3.47-1.92 4.64-1.2 1.2-3.08 2.4-6.92 2.4-6.12 0-10.8-4.92-10.8-11.04S5.4 1.2 11.52 1.2c3.36 0 5.76 1.2 7.56 2.88l2.52-2.52C19.2 0 15.84-1.2 11.52-1.2c-7.92 0-14.4 6.48-14.4 14.4s6.48 14.4 14.4 14.4c4.32 0 7.56-1.44 10.08-4.08 2.64-2.64 3.48-6.36 3.48-9.6 0-1.08-.12-1.92-.24-2.76h-12.36z"
+                                transform="translate(1 1)" />
+                        </svg>
+                        <span>Google</span>
+                    </button>
+                    <button
+                        class="btn-press flex items-center justify-center space-x-2 border-2 border-slate-100 py-3 rounded-2xl hover:bg-slate-50 transition font-bold text-slate-700">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M17.05 20.28c-.96.95-2.04 1.44-3.23 1.45-1.16.01-2.14-.46-3.23-.46-1.12 0-2.22.48-3.3.47-1.16-.01-2.28-.56-3.28-1.54-2.11-2.06-2.73-5.53-1.22-7.61.75-1.03 1.83-1.68 2.99-1.69 1.1-.01 2.02.48 3.14.48 1.09 0 2.22-.6 3.46-.48.51.02 1.96.21 2.88 1.54-2.31 1.35-1.94 4.58.4 5.79-.5 1.38-1.14 2.76-2.11 3.79zM12.03 7.25c-.02-2.23 1.84-4.21 4.02-4.25.02 2.37-2.02 4.49-4.02 4.25z" />
+                        </svg>
+                        <span>Apple</span>
+                    </button>
+                </div>
+    
+                <div class="relative flex items-center mb-8">
+                    <div class="flex-grow border-t border-slate-100"></div>
+                    <span class="flex-shrink mx-4 text-slate-400 text-xs font-bold uppercase tracking-widest">Or login
+                        with email</span>
+                    <div class="flex-grow border-t border-slate-100"></div>
+                </div>
+    
+                <!-- Form Login -->
+                <form class="space-y-4" onsubmit="event.preventDefault()">
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold text-slate-500 uppercase ml-1">Email or Username</label>
+                        <input type="text" placeholder="name@email.com"
+                            class="w-full p-4 border-2 border-slate-50 rounded-2xl focus:border-blue-500 transition-all bg-slate-50 font-medium">
+                    </div>
+                    <div class="space-y-1 relative">
+                        <label class="text-xs font-bold text-slate-500 uppercase ml-1">Password</label>
+                        <input type="password" placeholder="••••••••"
+                            class="w-full p-4 border-2 border-slate-50 rounded-2xl focus:border-blue-500 transition-all bg-slate-50 font-medium">
+                        <button type="button"
+                            class="absolute right-4 top-[2.4rem] text-slate-400 hover:text-blue-600 font-bold text-xs uppercase">Show</button>
+                    </div>
+                    <button
+                        class="btn-press w-full bg-blue-600 text-white py-4 rounded-2xl font-extrabold text-lg hover:bg-blue-700 shadow-xl shadow-blue-200 transition mt-2">
+                        Sign In
+                    </button>
+                </form>
+    
+                <div class="mt-6 text-center">
+                    <p class="text-slate-400 text-sm">New here? <a href="https://wa.me/yournumber"
+                            class="text-blue-600 font-bold hover:underline">Get a trial session code</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 p-2 rounded-lg">
+                    <i data-lucide="code-2" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="text-white font-black text-xl">Kidscodingteacher.com</span>
+            </div>
+            <div class="flex space-x-12 font-bold text-sm">
+                <a href="#" class="hover:text-white transition">Privacy</a>
+                <a href="#" class="hover:text-white transition">Terms</a>
+                <a href="#" class="hover:text-white transition">Contact</a>
+            </div>
+            <p class="text-xs">© 2024 Kidscodingteacher. Professional Private Coding Tuition.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass', 'shadow-md', 'py-3');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('glass', 'shadow-md', 'py-3');
+                nav.classList.add('py-4');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            
+            // Toggle icon between menu and x
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

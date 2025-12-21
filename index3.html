@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidscodingteacher.com | Result-Oriented Coding for Kids</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.05) 0%, rgba(255, 255, 255, 1) 90%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        /* Smooth scale for buttons */
+        .btn-press:active {
+            transform: scale(0.95);
+        }
+
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-blue-600 p-2 rounded-lg shadow-lg shadow-blue-200">
+                    <i data-lucide="code-2" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-extrabold text-blue-900 tracking-tight">
+                    KidsCoding<span class="text-blue-500">Teacher</span>
+                </span>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-slate-600">
+                <a href="#approach" class="hover:text-blue-600 transition">Approach</a>
+                <a href="#curriculum" class="hover:text-blue-600 transition">Curriculum</a>
+                <!-- Link to the portal section -->
+                <a href="#portal"
+                    class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition bg-blue-50 px-4 py-2 rounded-xl">
+                    <i data-lucide="log-in" class="w-4 h-4"></i>
+                    <span>Portal Login</span>
+                </a>
+                <a href="https://wa.me/yournumber"
+                    class="btn-press bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                    Book Trial
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-slate-900" onclick="toggleMenu()">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-slate-100 p-6 flex flex-col space-y-4 shadow-xl">
+            <a href="#approach" class="font-bold text-slate-700">Approach</a>
+            <a href="#curriculum" class="font-bold text-slate-700">Curriculum</a>
+            <a href="#portal" class="font-bold text-blue-600" onclick="toggleMenu()">Portal Login</a>
+            <button class="bg-blue-600 text-white py-3 rounded-xl font-bold">Book Trial</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-40 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div
+                    class="inline-flex items-center space-x-2 bg-blue-100/50 border border-blue-200 px-4 py-1 rounded-full text-blue-700 text-sm font-bold">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>Practical Skills, Immediate Results</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[1.1]">
+                    Stop "Learning" to Code. Start <span class="text-blue-600">Building</span> Apps.
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-lg">
+                    We bridge the gap between boring theory and exciting creation. Through our <span
+                        class="font-bold text-slate-900">Quick-Win Portal</span>, parents track every single achievement
+                    in real-time.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#curriculum"
+                        class="btn-press bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-200 text-center">
+                        Explore Courses
+                    </a>
+                    <button
+                        class="btn-press bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center">
+                        <i data-lucide="play-circle" class="mr-2 text-blue-600"></i> How it works
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="bg-slate-900 rounded-[2rem] p-4 shadow-2xl border-8 border-white/50 relative z-10">
+                    <div class="rounded-xl overflow-hidden bg-slate-800 p-6 font-mono text-sm text-blue-300">
+                        <div class="flex space-x-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <p class="text-slate-500 italic">// Building a "Quick-Win" project</p>
+                        <p><span class="text-pink-400">function</span> <span class="text-blue-400">createImpact</span>()
+                            {</p>
+                        <p class="ml-4"><span class="text-pink-400">const</span> skills = <span
+                                class="text-yellow-200">['HTML', 'Python', 'AI']</span>;</p>
+                        <p class="ml-4">results.show(<span class="text-green-400">"Immediately"</span>);</p>
+                        <p>}</p>
+                        <div class="mt-6 bg-white/10 p-4 rounded-lg border border-white/5">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i data-lucide="check" class="text-white"></i>
+                                </div>
+                                <span class="text-white text-xs font-bold uppercase tracking-wider text-wrap">Project
+                                    Verified by Portal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-400/20 blur-3xl rounded-full"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-indigo-400/20 blur-3xl rounded-full"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Strategy Section -->
+    <section id="approach" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Our "Result-First" Strategy</h2>
+                <p class="text-slate-500">Traditional teaching is too deep and too slow. We focus on what keeps students
+                    excited and parents informed.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 card-hover">
+                    <div
+                        class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-100">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Immediate MVP</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">We build a functional project in day one.
+                        Understanding follows creation, ensuring the "Quick Win" is achieved.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 card-hover">
+                    <div
+                        class="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-100">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Live Dashboard</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Parents get a unique code to see their child's
+                        quiz scores, project screenshots, and live website links 24/7.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 card-hover">
+                    <div
+                        class="w-14 h-14 bg-sky-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-sky-100">
+                        <i data-lucide="video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Flipped Learning</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Class time is for building. Theory is moved to
+                        short, fun videos and simple PDF guides for revision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 p-2 rounded-lg">
+                    <i data-lucide="code-2" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="text-white font-black text-xl">Kidscodingteacher.com</span>
+            </div>
+            <div class="flex space-x-8 font-bold text-sm">
+                <a href="#" class="hover:text-white transition">Privacy</a>
+                <a href="#" class="hover:text-white transition">Terms</a>
+                <a href="#" class="hover:text-white transition">Contact</a>
+            </div>
+            <p class="text-xs">© 2024 Kidscodingteacher. Part of the CE Initiative.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass', 'shadow-md', 'py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('glass', 'shadow-md', 'py-2');
+                nav.classList.add('py-4');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            icon.setAttribute('data-lucide', menu.classList.contains('hidden') ? 'menu' : 'x');
+            lucide.createIcons();
+        }
+    </script>
+</body>
+
+</html>

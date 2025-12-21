@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - KCT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+    <!-- Top Bar -->
+    <header class="bg-slate-900 text-white p-4 flex justify-between items-center sticky top-0 z-50">
+        <h1 class="font-black text-xl">KCT <span class="text-blue-400">ADMIN</span></h1>
+        <div class="flex items-center gap-4">
+            <button class="hidden md:block bg-blue-600 px-4 py-2 rounded-lg text-xs font-bold">Create Class</button>
+            <i class="fas fa-bell"></i>
+        </div>
+    </header>
+
+    <main class="p-4 md:p-8">
+        <!-- Stats Row -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white p-5 rounded-3xl shadow-sm border border-slate-200">
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Total Students</p>
+                <p class="text-2xl font-black">124</p>
+            </div>
+            <div class="bg-white p-5 rounded-3xl shadow-sm border border-slate-200">
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Active Now</p>
+                <p class="text-2xl font-black text-green-500">18</p>
+            </div>
+            <div class="bg-white p-5 rounded-3xl shadow-sm border border-slate-200">
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Grading Queue</p>
+                <p class="text-2xl font-black text-red-500">7</p>
+            </div>
+            <div class="bg-white p-5 rounded-3xl shadow-sm border border-slate-200">
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Avg XP</p>
+                <p class="text-2xl font-black text-blue-500">2.4k</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Student Management List -->
+            <div class="lg:col-span-2 space-y-4">
+                <div class="flex justify-between items-center mb-4 px-2">
+                    <h2 class="font-black text-lg">Student Roster</h2>
+                    <input type="text" placeholder="Search..."
+                        class="bg-white border rounded-xl px-4 py-2 text-sm focus:ring-2 ring-blue-500 outline-none">
+                </div>
+
+                <div class="bg-white rounded-3xl border shadow-sm overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-slate-50 border-b">
+                                <tr class="text-[10px] uppercase font-black text-slate-400">
+                                    <th class="p-5">Student</th>
+                                    <th class="p-5">Progress</th>
+                                    <th class="p-5">Status</th>
+                                    <th class="p-5">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-5">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-600">
+                                                AJ</div>
+                                            <span class="text-sm font-bold">Alex Johnson</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-5">
+                                        <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                                            <div class="bg-blue-600 h-full w-[45%]"></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-5">
+                                        <span
+                                            class="text-[10px] font-black bg-green-100 text-green-600 px-2 py-1 rounded-md">ACTIVE</span>
+                                    </td>
+                                    <td class="p-5">
+                                        <button class="text-blue-600 font-bold text-xs">View Code</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grading Notifications -->
+            <div class="space-y-4">
+                <h2 class="font-black text-lg px-2">Grading Queue</h2>
+                <div class="bg-white p-5 rounded-3xl border shadow-sm space-y-4">
+                    <div
+                        class="flex gap-4 p-3 hover:bg-slate-50 rounded-2xl transition cursor-pointer border border-transparent hover:border-slate-100">
+                        <div
+                            class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-file-code"></i></div>
+                        <div>
+                            <p class="text-sm font-bold">Sarah S. uploaded 'Flexbox Project'</p>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase mt-1">10 Minutes ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

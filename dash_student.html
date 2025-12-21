@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - KCT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .progress-line {
+            position: absolute;
+            left: 23px;
+            top: 40px;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+            z-index: 0;
+        }
+
+        .lesson-node {
+            z-index: 10;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 pb-20 lg:pb-0 lg:pl-64">
+
+    <!-- Mobile Header -->
+    <header class="lg:hidden bg-white border-b p-4 flex justify-between items-center sticky top-0 z-50">
+        <h1 class="font-black text-blue-600">KCT.STUDENT</h1>
+        <div class="flex items-center gap-3">
+            <span class="text-xs font-bold bg-blue-100 text-blue-600 px-2 py-1 rounded-lg">450 XP</span>
+            <div class="w-8 h-8 bg-slate-200 rounded-full"></div>
+        </div>
+    </header>
+
+    <!-- Desktop Sidebar -->
+    <aside class="hidden lg:flex fixed left-0 top-0 bottom-0 w-64 bg-slate-900 text-white flex-col p-6">
+        <h1 class="text-2xl font-black mb-10">KCT</h1>
+        <nav class="space-y-4 flex-1">
+            <a href="#" class="flex items-center gap-3 p-3 bg-blue-600 rounded-xl font-bold"><i
+                    class="fas fa-rocket"></i> My Track</a>
+            <a href="#" class="flex items-center gap-3 p-3 text-slate-400 hover:text-white transition"><i
+                    class="fas fa-code"></i> Playground</a>
+            <a href="#" class="flex items-center gap-3 p-3 text-slate-400 hover:text-white transition"><i
+                    class="fas fa-trophy"></i> Badges</a>
+        </nav>
+        <div class="bg-slate-800 p-4 rounded-2xl">
+            <p class="text-[10px] font-bold text-slate-500 uppercase">Current Level</p>
+            <p class="text-xl font-black">Level 12</p>
+        </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="p-4 md:p-8 max-w-4xl mx-auto">
+        <div class="mb-8">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Web Foundations</h2>
+            <p class="text-slate-500 font-medium">Topic 2: HTML Structure</p>
+        </div>
+
+        <!-- Track Hierarchy -->
+        <div class="relative space-y-12">
+            <!-- Topic 1 -->
+            <div class="relative">
+                <div class="progress-line"></div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-green-500 text-white flex items-center justify-center shadow-lg lesson-node">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg">Introduction to Code</h3>
+                </div>
+
+                <div class="ml-12 space-y-3">
+                    <div class="bg-white p-4 rounded-2xl border flex justify-between items-center shadow-sm">
+                        <span class="text-sm font-bold">What is HTML?</span>
+                        <span class="text-[10px] font-black text-green-500 uppercase">Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 2 (Current) -->
+            <div class="relative">
+                <div class="progress-line border-dashed"></div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200 lesson-node">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg">The Box Model</h3>
+                </div>
+
+                <div class="ml-12 space-y-4">
+                    <!-- Active Lesson -->
+                    <div class="bg-white p-5 rounded-2xl border-2 border-blue-500 shadow-md">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="font-black text-slate-900">Margins vs Padding</h4>
+                                <p class="text-xs text-slate-500">Video + Exercise • 12 Mins</p>
+                            </div>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <button
+                            class="w-full bg-blue-600 text-white py-3 rounded-xl font-black text-sm uppercase tracking-wider">Start
+                            Lesson</button>
+                    </div>
+
+                    <!-- Next Lesson -->
+                    <div class="bg-white p-4 rounded-2xl border flex justify-between items-center opacity-70">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-lock text-slate-300"></i>
+                            <span class="text-sm font-bold text-slate-600">Border Artistry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 3 (Locked) -->
+            <div class="relative opacity-40">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-slate-200 text-slate-400 flex items-center justify-center lesson-node">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-slate-400">CSS Flexbox</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Navigation Bar -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around p-3 z-50">
+        <button class="text-blue-600 flex flex-col items-center gap-1"><i class="fas fa-rocket"></i><span
+                class="text-[10px] font-bold">Track</span></button>
+        <button class="text-slate-400 flex flex-col items-center gap-1"><i class="fas fa-code"></i><span
+                class="text-[10px] font-bold">Code</span></button>
+        <button class="text-slate-400 flex flex-col items-center gap-1"><i class="fas fa-user"></i><span
+                class="text-[10px] font-bold">Profile</span></button>
+    </nav>
+</body>
+
+</html>
